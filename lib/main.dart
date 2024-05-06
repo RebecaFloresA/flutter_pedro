@@ -8,7 +8,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: Colors.blueAccent,
+      statusBarColor: Colors.purple,
     ),
   );
   runApp(YoutubePlayerDemoApp());
@@ -22,17 +22,17 @@ class YoutubePlayerDemoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Youtube Player Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
         appBarTheme: const AppBarTheme(
-          color: Colors.blueAccent,
+          color: Color.fromARGB(255, 225, 6, 156),
           titleTextStyle: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w300,
-            fontSize: 20,
+            fontSize: 30,
           ),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.blueAccent,
+          color: Colors.purple,
         ),
       ),
       home: MyHomePage(),
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isPlayerReady = false;
 
   final List<String> _ids = [
-    YoutubePlayer.convertUrlToId("https://www.youtube.com/watch?v=UUhavvMO2FQ").toString(),
+    YoutubePlayer.convertUrlToId("https://www.youtube.com/watch?v=PfNJ6-ZUq9U").toString(),
   ];
 
   @override
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
       player: YoutubePlayer(
         controller: _controller,
         showVideoProgressIndicator: true,
-        progressIndicatorColor: Colors.blueAccent,
+        progressIndicatorColor: Colors.yellow,
         topActions: <Widget>[
           const SizedBox(width: 8.0),
           Expanded(
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context, player) => Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Pedro Pedro Pedro Pedro',
+            'Y sali para atrás',
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -212,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       FullScreenButton(
                         controller: _controller,
-                        color: Colors.blueAccent,
+                        color: Colors.purple,
                       ),
                     ],
                   ),
@@ -258,14 +258,14 @@ class _MyHomePageState extends State<MyHomePage> {
       text: TextSpan(
         text: '$title : ',
         style: const TextStyle(
-          color: Colors.blueAccent,
+          color: Colors.pink,
           fontWeight: FontWeight.bold,
         ),
         children: [
           TextSpan(
             text: value,
             style: const TextStyle(
-              color: Colors.blueAccent,
+              color: Colors.black,
               fontWeight: FontWeight.w300,
             ),
           ),
@@ -287,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 16.0,
           ),
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.purple,
         behavior: SnackBarBehavior.floating,
         elevation: 1.0,
         shape: RoundedRectangleBorder(
